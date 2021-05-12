@@ -21,11 +21,14 @@ ob_start() ?>
         <th>Nombres de pages</th>
         <th colspan="2">Actions</th>     
     </tr>
-    <?php for($i=0; $i < count($livreManager->getLIvres()); $i++) :  ?>
+    <?php 
+    $livres = $livreManager->getLIvres();
+    for($i=0; $i < count($livreManager->getLIvres()); $i++) :  
+    ?>
     <tr>
-        <td class="align-middle"><img src="public/images/<?= $livreManager->getLIvres()[$i]->getImage(); ?>" width="50px;"></td>
-        <td class="align-middle"><?= $livreManager->getLIvres()[$i]->getTitre(); ?></td>
-        <td class="align-middle"><?= $livreManager->getLIvres()[$i]->getNbpages(); ?></td>
+        <td class="align-middle"><img src="public/images/<?= $livres[$i]->getImage(); ?>" width="50px;"></td>
+        <td class="align-middle"><?= $livres[$i]->getTitre(); ?></td>
+        <td class="align-middle"><?= $livres[$i]->getNbpages(); ?></td>
         <td class="align-middle"><a href="" class="btn btn-warning">Modifier</a></td>
         <td class="align-middle"><a href="" class="btn btn-danger">Suprimer</a></td>
     </tr>
