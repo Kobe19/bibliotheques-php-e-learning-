@@ -5,7 +5,7 @@ class LIvre{
     private $nbpages;
     private $image;
 
-    public static $livres;
+    //public static $livres;
 
     public function __construct($id,$titre,$nbpages,$image)
     {
@@ -13,7 +13,7 @@ class LIvre{
         $this->titre = $titre;
         $this->nbpages = $nbpages;
         $this->image = $image; 
-        self::$livres[] = $this; 
+        //self::$livres[] = $this; 
     }
 
     public function getId(){
