@@ -1,16 +1,17 @@
 <?php 
-require_once "Livres.class.php";
-$l1 = new Livre(1, "Algebre 1A", 300, "liv.jpg");
-$l2 = new Livre(2, "Analyse Lineaire", 200, "liv.jpg");
-$l3 = new Livre(3, "MAths pour infos", 500, "liv.jpg");
-$l4 = new Livre(4, "Physique du reel", 100, "liv.jpg");
+//$l1 = new Livre(1, "Algebre 1A", 300, "liv.jpg");
+//$l2 = new Livre(2, "Analyse Lineaire", 200, "liv.jpg");
+//$l3 = new Livre(3, "MAths pour infos", 500, "liv.jpg");
+//$l4 = new Livre(4, "Physique du reel", 100, "liv.jpg");
+
+//$livreManager->ajoutLivre($l1);
+//$livreManager->ajoutLivre($l2);
+//$livreManager->ajoutLivre($l3);
+//$livreManager->ajoutLivre($l4); 
 
 require_once "LivreManager.class.php";
-$livreManager = new LivreManager();
-$livreManager->ajoutLivre($l1);
-$livreManager->ajoutLivre($l2);
-$livreManager->ajoutLivre($l3);
-$livreManager->ajoutLivre($l4); 
+$livreManager = new LivreManager;
+$livreManager->chargementLivres();
 
 ob_start() ?>
 
