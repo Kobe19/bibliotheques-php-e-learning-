@@ -6,5 +6,5 @@ ob_start() ?>
 <?php
 $content = ob_get_clean();
 $titre = "Bibliotheques MDA";
-require "template.php";
+require "template.view.php";
 ?>

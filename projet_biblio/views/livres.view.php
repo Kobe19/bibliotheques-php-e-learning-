@@ -9,7 +9,7 @@
 //$livreManager->ajoutLivre($l3);
 //$livreManager->ajoutLivre($l4); 
 
-require_once "LivreManager.class.php";
+require_once "models/LivreManager.class.php";
 $livreManager = new LivreManager;
 $livreManager->chargementLivres();
 
@@ -23,7 +23,6 @@ ob_start() ?>
         <th colspan="2">Actions</th>     
     </tr>
     <?php 
-    $livres = $livreManager->getLIvres();
     for($i=0; $i < count($livreManager->getLIvres()); $i++) :  
     ?>
     <tr>
@@ -40,5 +39,5 @@ ob_start() ?>
 <?php
 $content = ob_get_clean();
 $titre = "Les livres de la bibliotheque";
-require "template.php";
+require "template.view.php";
 ?>
