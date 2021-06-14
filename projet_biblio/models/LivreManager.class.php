@@ -3,7 +3,7 @@ require_once "Model.class.php";
 require_once "Livre.class.php"; 
 
 class LivreManager extends Model{
-    private $livres;
+    private $livres; //tableau de livre
 
     public function ajoutLivre($livre){
         $this->livres[] = $livre;
@@ -25,6 +25,14 @@ class LivreManager extends Model{
         foreach($meslivres as $livre){
             $l = new Livre($livre['id'],$livre['titre'],$livre['nbPAges'],$livre['image']);
             $this->ajoutLivre($l);
+        }
+    }
+
+    public function getLivreById($id){
+        for($i=0; $i < count($this->livres); $i++){
+            if($this->livres[$i]->getId() === $id){
+                return $this->livres[$i];
+            }
         }
     }
     

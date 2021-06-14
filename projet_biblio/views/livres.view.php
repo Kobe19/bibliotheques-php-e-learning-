@@ -27,14 +27,14 @@ ob_start() ?>
     ?>
     <tr>
         <td class="align-middle"><img src="public/images/<?= $livres[$i]->getImage(); ?>" width="50px;"></td>
-        <td class="align-middle"><?= $livres[$i]->getTitre(); ?></td>
+        <td class="align-middle"><a href="<?= URL ?>livres/l/<?= $livres[$i]->getId(); ?>"><?= $livres[$i]->getTitre(); ?></td>
         <td class="align-middle"><?= $livres[$i]->getNbpages(); ?></td>
         <td class="align-middle"><a href="" class="btn btn-warning">Modifier</a></td>
         <td class="align-middle"><a href="" class="btn btn-danger">Suprimer</a></td>
     </tr>
     <?php endfor; ?>
 </table>
-<a href="" class="btn btn-success d-block">Ajouter</a>
+<a href="<?= URL ?>livres/a" class="btn btn-success d-block">Ajouter</a>
 
 <?php
 $content = ob_get_clean();
