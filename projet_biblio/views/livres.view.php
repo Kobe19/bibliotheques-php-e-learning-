@@ -29,8 +29,12 @@ ob_start() ?>
         <td class="align-middle"><img src="public/images/<?= $livres[$i]->getImage(); ?>" width="50px;"></td>
         <td class="align-middle"><a href="<?= URL ?>livres/l/<?= $livres[$i]->getId(); ?>"><?= $livres[$i]->getTitre(); ?></td>
         <td class="align-middle"><?= $livres[$i]->getNbpages(); ?></td>
-        <td class="align-middle"><a href="" class="btn btn-warning">Modifier</a></td>
-        <td class="align-middle"><a href="" class="btn btn-danger">Suprimer</a></td>
+        <td class="align-middle"><a href="<?= URL ?>livres/m/<?= $livres[$i]->getId(); ?>" class="btn btn-warning">Modifier</a></td>
+        <td class="align-middle">
+            <form method="POST" action="<?= URL ?>livres/s/<?= $livres[$i]->getId(); ?>" onSubmit="return confirm('voulez vous vraiment supprimer le livre?');">
+                <button class="btn btn-danger" type="submit">Supprimer</button>
+            </form>
+        </td>
     </tr>
     <?php endfor; ?>
 </table>

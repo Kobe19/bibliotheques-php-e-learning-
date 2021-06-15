@@ -8,11 +8,11 @@ ob_start() ?>
   </div>
   <div class="mb-3">
     <label for="nbPages">Nombre de pages : </label>
-    <input type="number" class="form-control" id="titre" name="titre">
+    <input type="number" class="form-control" id="nbPages" name="nbPages">
   </div>
   <div class="mb-3">
-    <label for="image" class="form-label">image : </label>
-    <input class="form-control" type="file" id="formFile">
+    <label for="image">Image : </label>
+    <input class="form-control" type="file" id="image" name="image">
   </div>
   <button type="submit" class="btn btn-primary">Valider</button>
 </form>
